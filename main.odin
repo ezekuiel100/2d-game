@@ -6,6 +6,8 @@ import rl "vendor:raylib"
 
 main :: proc() {
 	rl.InitWindow(500, 300, "My game")
+	rl.SetWindowState(rl.ConfigFlags{rl.ConfigFlag.WINDOW_RESIZABLE})
+
 	defer rl.CloseWindow()
 
 	rl.SetTargetFPS(144)
